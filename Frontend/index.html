@@ -6,10 +6,18 @@
     <title>Commission Quote App</title>
   </head>
   <body>
-    <!-- 1. 👇 React looks specifically for this div wrapper to mount into -->
+    <!-- 
+      1. Application Mount Anchor point: 
+      React explicitly hooks into this DOM node ('root') to inject and render 
+      the interactive UI component tree managed by App.jsx.
+    -->
     <div id="root"></div> 
     
-    <!-- 2. 👇 Ensure your script is placed AFTER the root div wrapper -->
+    <!-- 
+      2. Module Entry point script:
+      Vite utilizes this ES module loading tag to initiate the React runtime compilation pipeline.
+      Placing this after the anchor div ensures the DOM node exists before execution begins.
+    -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

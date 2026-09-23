@@ -1,5 +1,6 @@
 const { calculateCommission } = require('../src/services/quoteEngine');
 
+// Running test cases
 describe('Commission Quote Engine Tests', () => {
   test('should calculate correct commission for Low Risk (Band A)', () => {
     const result = calculateCommission(10000, 24, 'A');
@@ -10,7 +11,6 @@ describe('Commission Quote Engine Tests', () => {
 
     test('should adjust rate upward for long term durations', () => {
     const result = calculateCommission(10000, 48, 'B'); // 48 months > 36 months
-    // 👇 Bypasses binary fraction anomalies by checking close precision
     expect(result.commissionRate).toBeCloseTo(0.030, 5); 
     });
 

@@ -28,7 +28,6 @@ app.post('/api/v1/commission/quote', validateApiKey, (req, res) => {
   }
 });
 
-// 👇 ADD THIS AT THE BOTTOM TO KEEP THE PROCESS RUNNING
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`🚀 Mock Vendor API is live on http://localhost:${PORT}`);
